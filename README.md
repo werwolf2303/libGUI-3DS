@@ -5,7 +5,7 @@
 <a>A gui library for the Nintendo 3DS (Build with the new 3DS in mind)</a>
 <br>
 <br>
-<h3>Please help me! Please cant do all of it myself</h3>
+<h3>Please help me! I cant do all of it myself</h3>
 <br>
 <h2>Features</h2>
 
