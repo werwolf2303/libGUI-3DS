@@ -1,4 +1,4 @@
-<h2>LibGUI<h2>
+<h2>LibGUI-3DS<h2>
 <br>
 <a>This is my firt 3DS Project that i want to continue.. Dont know when its finished</a>
 <br>
