@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="0a5773bb-a2b7-4f4f-b537-d0000344dbc0" name="DevkitPro" defaultType="MAKE">
+      <configuration id="9e7e9b7f-d1c9-4593-964e-07ba76de3abf" name="DevkitPro" toolchainName="DevkitPro" />
+    </target>
+  </component>
+</project>

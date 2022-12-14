@@ -1,0 +1,84 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make debug",
+            "type": "process",
+            "command": "make",
+            "args": [
+                "DEBUG=1"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "make release",
+            "type": "process",
+            "command": "make",
+            "args": [
+                "DEBUG=0"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "clean",
+            "type": "process",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "dependsOn": [
+                "make debug"
+            ],
+            "isBackground": true,
+            //"command": "C:\\Users\\Werwolf2303\\AppData\\Local\\Citra\\canary-mingw\\citra-qt.exe",
+            "command": "C:/devkitPro/tools/bin/3dslink -a 192.168.137.62 TestApp.3dsx",
+            "args": [
+
+            ],
+            "presentation": {
+                "clear": true,
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "gdb-debug",
+            "type": "shell",
+            "dependsOn": [
+                "make debug"
+            ],
+            "isBackground": false,
+            "command": "C:\\Users\\gianl\\AppData\\Local\\Citra\\canary-mingw\\citra.exe",
+            //"command": "C:/devkitPro/tools/bin/3dslink --address 192.168.2.135 Spot3DS.3dsx",
+            "args": [
+                "TestApp.3dsx"
+            ],
+            "presentation": {
+                "clear": true,
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "stop-emulation",
+            "type": "shell",
+            "command": "taskkill",
+            "args": [
+                "/F /IM",
+                "citra.exe"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
