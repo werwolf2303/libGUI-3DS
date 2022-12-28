@@ -111,7 +111,8 @@
  G:/3DSDEV/libGUI/source/libGUI/logging/Logger.cpp \
  G:/3DSDEV/libGUI/source/libGUI/elements/Button.cpp \
  G:/3DSDEV/libGUI/source/libGUI/elements/Text.cpp \
- G:/3DSDEV/libGUI/source/libGUI/elements/RadioButton.cpp
+ G:/3DSDEV/libGUI/source/libGUI/elements/RadioButton.cpp \
+ G:/3DSDEV/libGUI/source/libGUI/Threading.cpp
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -225,3 +226,4 @@ G:/3DSDEV/libGUI/source/libGUI/logging/Logger.cpp:
 G:/3DSDEV/libGUI/source/libGUI/elements/Button.cpp:
 G:/3DSDEV/libGUI/source/libGUI/elements/Text.cpp:
 G:/3DSDEV/libGUI/source/libGUI/elements/RadioButton.cpp:
+G:/3DSDEV/libGUI/source/libGUI/Threading.cpp:

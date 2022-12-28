@@ -6,6 +6,7 @@
 #include "libGUI/elements/Button.cpp"
 #include "libGUI/elements/RadioButton.cpp"
 #include "libGUI/elements/Text.cpp"
+#include "libGUI/Threading.cpp"
 
 class Window {
     private:
@@ -18,6 +19,8 @@ class Window {
     std::list<Button> buttons;
     std::list<Text> texts;
     std::list<RadioButton> radiobuttons;
+    touchPosition touch;
+    Threading thread;
     public:
     void setDebug(gfxScreen_t screen) {
         logscreen = screen;
@@ -38,6 +41,15 @@ class Window {
         }
         return;
     }
+    int getTouchY() {
+        return touch.py;
+    }
+    int getTouchX() {
+        return touch.px;
+    }
+    void repaint() {
+        drawElements();
+    }
     void addText(Text t) {
         texts.push_back(t);
         return;
@@ -56,6 +68,7 @@ class Window {
         C2D_Init(C2D_DEFAULT_MAX_OBJECTS);
         C2D_Prepare();
         scr = C2D_CreateScreenTarget(winscreen, GFX_LEFT);
+		hidTouchRead(&touch);
         return;
     }
     void setBackgroundColor(u32 color) {
@@ -76,6 +89,9 @@ class Window {
         initDrawing();
         drawElements();
         EndDrawing();
+    }
+    Logger getLogger() {
+        return log;
     }
     void deinit() {
         C2D_Fini();

@@ -20,14 +20,14 @@ class Button {
     Text te;
     Logger log;
     void draw() {
+        C2D_DrawRectangle(xaxis,yaxis,0,width,height,backgroundColor,backgroundColor,backgroundColor,backgroundColor);
         if(text!="") {
             te.text = text;
             te.size = 0.5f;
-            te.xaxis = xaxis + 3;
+            te.xaxis = xaxis;
             te.yaxis = yaxis;
             te.draw();
         }
-        C2D_DrawRectangle(xaxis,yaxis,0,width,height,backgroundColor,backgroundColor,backgroundColor,backgroundColor);
         log.debugXYWH("Button", xaxis, yaxis, width, height);
         return;
     };

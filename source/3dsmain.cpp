@@ -9,22 +9,15 @@
 int main(int argc, char* argv[])
 {
     Window win;
-    win.init(GFX_TOP);
-    win.setDebug(GFX_BOTTOM);
+    win.init(GFX_BOTTOM);
+	win.setDebug(GFX_TOP);
 	Button button;
 	button.text = "ButtonText";
 	button.height = 20;
 	button.width = 160;
 	button.xaxis = 50;
 	button.yaxis = 40;
-	Button button2;
-	button2.text = "ButtonText2";
-	button2.height = 20;
-	button2.height = 160;
-	button2.xaxis = 50;
-	button2.yaxis = 130;
 	win.addButton(button);
-	win.addButton(button2);
 	win.draw();
 	while (aptMainLoop())
 	{
